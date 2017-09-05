@@ -1,5 +1,5 @@
 {
-  "name": "experiment",
+  "name": "realmcore",
   "version": "1.0.0",
   "main": "server/server.js",
   "engines": {
@@ -21,6 +21,7 @@
     "loopback-connector-postgresql": "^3.0.0",
     "serve-favicon": "^2.0.1",
     "socket.io": "^2.0.3",
+    "socketio": "^1.0.0",
     "strong-error-handler": "^2.0.0"
   },
   "devDependencies": {
@@ -33,5 +34,5 @@
     "url": ""
   },
   "license": "UNLICENSED",
-  "description": "experiment"
+  "description": "realmcore"
 }

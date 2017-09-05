@@ -1,9 +1,10 @@
 'use strict';
 
-var loopback = require('loopback');
-var boot = require('loopback-boot');
-
-var app = module.exports = loopback();
+const loopback = require('loopback');
+const app = module.exports = loopback();
+const boot = require('loopback-boot');
+const fs = require("fs");
+const path = require("path");
 
 app.start = function() {
   // start the web server
@@ -17,6 +18,25 @@ app.start = function() {
     }
   });
 };
+
+// const io = require("socket.io")(app.start());
+
+// io.on("connection", function(socket) {
+//   console.log("Working")
+// });
+
+// Set up static file proxy for the /client folder mapped to /static
+app.use("/static", loopback.static(path.join(__dirname, '/../client')));
+app.use("/static", function(req, res, next) {
+  // res.sendStatus(404);
+});
+
+// let index = fs.readFileSync(path.join(__dirname, '/../client', 'index.html'));
+
+// // Handles the html5 client redirect stuff
+// app.get("*", function(req, res, next) {
+//   res.sendFile(index);
+// });
 
 // Bootstrap the application, configure models, datasources and middleware.
 // Sub-apps like REST API are mounted via boot scripts.
