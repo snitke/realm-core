@@ -7,7 +7,8 @@
 
     return {
       login: Login,
-      logout: Logout
+      logout: Logout,
+      register: Register
     };
 
     function Login(username, password) {
@@ -22,9 +23,19 @@
 
     function Logout() {
       let self = this;
-      debugger;
+
       console.log("accessToken", LoopBackAuth.accessTokenId);
       return User.logout(LoopBackAuth.accessTokenId).$promise;
+    }
+
+    function Register(username, email, password) {
+      let self = this;
+      debugger;
+      return User.create({
+        username: username,
+        email: email,
+        password: password
+      }).$promise;
     }
   }
   AppService.$inject = ["User", "LoopBackAuth", "$q"];
