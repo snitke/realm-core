@@ -16,6 +16,7 @@
 coverage
 node_modules
 npm-debug.log
+client/vendor
 node_modules
 dist
 datasources.json
