@@ -8,12 +8,11 @@ function LoginController($scope, $state, TestTable, AppService) {
     debugger;
     AppService.register(username, email, password)
     .then(user => {
-      console.log("LoginController", user[0]);
+      console.log("User registered!", user);
       $state.go("home");
     })
     .catch(err => {
-      debugger;
-      console.warn("Incorrect username/password");
+      console.warn("Registration failed!", err);
     });
   };
 
@@ -21,11 +20,11 @@ function LoginController($scope, $state, TestTable, AppService) {
 
     AppService.login(username, password)
     .then(accessToken => {
-      console.log("LoginController", accessToken);
+      console.log("User logged in!", accessToken);
       $state.go("home");
     })
     .catch(err => {
-      console.warn("Incorrect username/password");
+      console.warn("User login failed!");
     });
   };
 
@@ -33,10 +32,11 @@ function LoginController($scope, $state, TestTable, AppService) {
 
     AppService.logout()
     .then(() => {
+      console.log("User logged out!");
       $state.go("home");
     })
     .catch(err => {
-      console.warn("LoginController", err);
+      console.warn("User ");
     });
   };
 }]);
