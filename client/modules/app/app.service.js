@@ -30,7 +30,7 @@
 
     function Register(username, email, password) {
       let self = this;
-      debugger;
+
       return User.create({
         username: username,
         email: email,

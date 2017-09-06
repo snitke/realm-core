@@ -5,7 +5,7 @@ angular
 function LoginController($scope, $state, TestTable, AppService) {
 
   $scope.register = function(username, email, password) {
-    debugger;
+
     AppService.register(username, email, password)
     .then(user => {
       console.log("User registered!", user);
@@ -36,7 +36,7 @@ function LoginController($scope, $state, TestTable, AppService) {
       $state.go("home");
     })
     .catch(err => {
-      console.warn("User ");
+      console.warn("User log out failed!");
     });
   };
 }]);

@@ -7,7 +7,7 @@ angular
   })
   .$promise
   .then(function(result) {
-    debugger;
+
     $scope.result = result;
   })
   .catch(function(err) {

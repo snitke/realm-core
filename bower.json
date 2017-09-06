@@ -12,7 +12,7 @@
   ],
   "dependencies": {
     "angular-resource": "^1.6.4",
-    "angular-ui-router": "~0.2.13",
+    "angular-ui-router": "~0.3.2",
     "bootstrap": "~3.3.4"
   },
   "resolutions": {

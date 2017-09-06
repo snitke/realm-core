@@ -10,11 +10,12 @@
 *.swp
 *.tgz
 *.xml
-.DS_Store
 .idea
 .project
 .strong-pm
 coverage
 node_modules
 npm-debug.log
+node_modules
+dist
 datasources.json
