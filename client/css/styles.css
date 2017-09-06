@@ -1,6 +1,11 @@
 body {
-  padding-top:50px
+  padding-top: 50px;
 }
+
+.page-content {
+  padding-top: 15px;
+}
+
 .glyphicon-remove:hover {
-  cursor:pointer
+  cursor: pointer;
 }

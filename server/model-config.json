@@ -42,5 +42,9 @@
   "TestAuto": {
     "dataSource": "nitsko",
     "public": true
+  },
+  "Report": {
+    "dataSource": "realmcore",
+    "public": true
   }
 }

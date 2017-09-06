@@ -9,8 +9,8 @@ function($stateProvider, $urlRouterProvider, $locationProvider) {
   $stateProvider
   .state("home", {
     url: "/",
-    templateUrl: "/static/modules/login/login.html",
-    controller: "LoginController"
+    templateUrl: "/static/modules/reports/create/create.html",
+    controller: "ReportCreateController"
   })
   .state("realmtell", {
     url: "/realmtell",
@@ -21,6 +21,21 @@ function($stateProvider, $urlRouterProvider, $locationProvider) {
     url: "/login",
     templateUrl: "/static/modules/login/login.html",
     controller: "LoginController"
+  })
+  .state("about", {
+    url: "/about",
+    templateUrl: "/static/modules/about/about.html",
+    controller: "AboutController"
+  })
+  .state("reportcreate", {
+    url: "/report/create",
+    templateUrl: "/static/modules/reports/create/create.html",
+    controller: "ReportCreateController"
+  })
+  .state("reportlist", {
+    url: "/report/list",
+    templateUrl: "/static/modules/reports/list/list.html",
+    controller: "ReportListController"
   });
 
   $locationProvider.hashPrefix("");

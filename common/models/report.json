@@ -1,0 +1,38 @@
+{
+  "name": "Report",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true,
+    "postgresql": {
+      "schema": "public",
+      "table": "report"
+    }
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "required": true
+    },
+    "cheaterIGN": {
+      "type": "string",
+      "required": true
+    },
+    "reporterIGN": {
+      "type": "string"
+    },
+    "evidenceLink": {
+      "type": "string",
+      "required": true
+    },
+    "verified": {
+      "type": "Boolean",
+      "required": true,
+      "default": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

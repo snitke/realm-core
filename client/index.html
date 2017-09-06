@@ -23,9 +23,11 @@
       <div class="container">
         <div class="navbar-header">
           <a class="navbar-brand" ui-sref="home">The Cheater Report</a>
-          <a class="navbar-brand" ui-sref="home">Report Someone</a>
-          <a class="navbar-brand" ui-sref="realmtell">About</a>
+          <a class="navbar-brand" ui-sref="reportcreate">Report A Player</a>
+          <a class="navbar-brand" ui-sref="reportlist">Verified Reports</a>
+          <a class="navbar-brand" ui-sref="about">About</a>
           <a class="navbar-brand text-right" ui-sref="login">Log In</a>
+          <a class="navbar-brand text-right" ui-sref="logout">Log Out</a>
         </div>
       </div>
     </div>
@@ -45,6 +47,10 @@
     <script src="/static/modules/home/home.js" type="application/javascript"></script>
     <script src="/static/modules/realmtell/start/start.ctrl.js" type="application/javascript"></script>
     <script src="/static/modules/login/login.ctrl.js" type="application/javascript"></script>
+    <script src="/static/modules/about/about.ctrl.js" type="application/javascript"></script>
+    <script src="/static/modules/reports/create/create.ctrl.js" type="application/javascript"></script>
+    <script src="/static/modules/reports/list/list.ctrl.js" type="application/javascript"></script>
     <script src="/static/modules/app/app.service.js" type="application/javascript"></script>
+    <script src="/static/modules/reports/reports.service.js" type="application/javascript"></script>
   </body>
 </html>
